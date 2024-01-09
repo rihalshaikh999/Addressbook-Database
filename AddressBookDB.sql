@@ -68,3 +68,9 @@ select * from AddressBook;
 SELECT Type, COUNT(*) AS AddressBookSize
 FROM AddressBook
 GROUP BY Type;
+
+
+-- UC11 add person to both Friend and Family
+insert into Addressbook(FirstName, LastName, adress, city, state, zip, phone, email, Type) 
+values('Rihal', 'Shaikh', 'Mumbai', 'Vashi', 'MH', 411045, 8830540511, 'rs999@gmail.com ','Friends');
+select * from Addressbook;
