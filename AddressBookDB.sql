@@ -53,3 +53,13 @@ SELECT state, COUNT(*) AS state_size FROM AddressBook GROUP BY state;
 
 -- UC8 Retrieve entries sorted alphabetically by Person’s name for a given city 
 SELECT FirstName, LastName, City FROM AddressBook WHERE city = 'Mumbai' ORDER BY FirstName;
+
+
+-- UC9 Identify each Address Book with name and Type.
+ALTER TABLE AddressBook
+ADD COLUMN Type VARCHAR(50);
+UPDATE AddressBook SET Type = 'Family' WHERE FirstName = 'Rihal';
+UPDATE AddressBook SET Type = 'Family' WHERE FirstName = 'Javed';
+UPDATE AddressBook SET Type = 'Friends' WHERE FirstName = 'Husen';
+UPDATE AddressBook SET Type = 'Profession' WHERE FirstName = 'Av';
+select * from AddressBook;
