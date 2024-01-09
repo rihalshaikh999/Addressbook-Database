@@ -44,6 +44,9 @@ select  * from AddressBook;
 
 
 -- UC6 Ability to Retrieve Person belonging to a City or State from the Address Book
-SELECT * FROM AddressBook WHERE city = 'Mumbai'
+SELECT * FROM AddressBook WHERE city = 'Mumbai';
 -- TRUNCATE table AddressBook;
 
+-- UC7 Ability to understand the size of address book by City and State - Here size indicates the count
+SELECT city, COUNT(*) AS city_size FROM AddressBook GROUP BY city;
+SELECT state, COUNT(*) AS state_size FROM AddressBook GROUP BY state;
