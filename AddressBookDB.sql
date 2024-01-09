@@ -50,3 +50,6 @@ SELECT * FROM AddressBook WHERE city = 'Mumbai';
 -- UC7 Ability to understand the size of address book by City and State - Here size indicates the count
 SELECT city, COUNT(*) AS city_size FROM AddressBook GROUP BY city;
 SELECT state, COUNT(*) AS state_size FROM AddressBook GROUP BY state;
+
+-- UC8 Retrieve entries sorted alphabetically by Person’s name for a given city 
+SELECT FirstName, LastName, City FROM AddressBook WHERE city = 'Mumbai' ORDER BY FirstName;
