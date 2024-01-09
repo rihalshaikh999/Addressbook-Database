@@ -63,3 +63,8 @@ UPDATE AddressBook SET Type = 'Family' WHERE FirstName = 'Javed';
 UPDATE AddressBook SET Type = 'Friends' WHERE FirstName = 'Husen';
 UPDATE AddressBook SET Type = 'Profession' WHERE FirstName = 'Av';
 select * from AddressBook;
+
+-- UC10 get number of contact persons i.e. count by type
+SELECT Type, COUNT(*) AS AddressBookSize
+FROM AddressBook
+GROUP BY Type;
