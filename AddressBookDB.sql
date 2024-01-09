@@ -24,3 +24,16 @@ VALUES ('Rihal', 'Shaikh', 'Mumbai', 'Mumbai', 'MH', '416416', '+918830540511', 
 ('Husen', 'pirjade', 'Sangli', 'Sangli', 'MH', '416416', '+9850713145', 'hp999@gmail.com');
 select  * from AddressBook;
 
+-- UC4
+UPDATE AddressBook
+SET adress = 'mumbai', 
+city = 'mumbai', 
+state = 'mh', 
+zip = '415417', 
+phone = '80808080', 
+email = 'updated.email@email.com'
+WHERE FirstName = 'Rihal';
+
+SET SQL_SAFE_UPDATES = 0;
+
+
