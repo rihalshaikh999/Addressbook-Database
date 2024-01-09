@@ -74,3 +74,23 @@ GROUP BY Type;
 insert into Addressbook(FirstName, LastName, adress, city, state, zip, phone, email, Type) 
 values('Rihal', 'Shaikh', 'Mumbai', 'Vashi', 'MH', 411045, 8830540511, 'rs999@gmail.com ','Friends');
 select * from Addressbook;
+
+-- UC12 Draw the ER Diagram for Address Book Service DB
+-- 1st drop column 
+ALTER TABLE Addressbook DROP COLUMN Type; 
+select * from Addressbook;
+-- 2nd part
+create table AddressbookType(id int primary key AUTO_INCREMENT, Type varchar(100));
+desc Addressbooktype;
+select * from AddressbookType;
+-- 
+INSERT INTO AddressbookType (type)
+VALUES('family'),('friends'),('Professional');
+
+-- add foreign key
+ALTER TABLE Addressbook
+ADD COLUMN type_id INT;
+
+ALTER TABLE Addressbook
+ADD CONSTRAINT FK_AddressbookType
+FOREIGN KEY (type_id) REFERENCES AddressbookType(id);
