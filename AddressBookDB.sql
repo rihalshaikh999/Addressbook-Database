@@ -36,4 +36,8 @@ WHERE FirstName = 'Rihal';
 
 SET SQL_SAFE_UPDATES = 0;
 
+-- UC5
+DELETE FROM AddressBook
+WHERE FirstName = 'Husen';
+select  * from AddressBook;
 
